@@ -17,6 +17,8 @@ help:
 	@echo "💻 Developer Orgs:"
 	@echo "  make dev-sync ORG=dev-feature-a"
 	@echo "  make dev-open ORG=dev-feature-a"
+	@echo "  make dev-deploy ORG=dev-feature-a"
+	@echo "  make dev-deploy-full ORG=dev-feature-a"
 	@echo ""
 	@echo "🧪 Tests:"
 	@echo "  make test ORG=dev-feature-a"
@@ -25,7 +27,7 @@ help:
 # Create a complete Scratch Org
 scratch-create:
 	@if [ -z "$(NAME)" ]; then echo "❌ Usage: make scratch-create NAME=my-feature"; exit 1; fi
-	@./scripts/shell/create-scratch-org.sh $(NAME) $(or $(DAYS),$(DEFAULT_DURATION))
+	@./scripts/create-scratch-org.sh $(NAME) $(or $(DAYS),$(DEFAULT_DURATION))
 
 # Delete a Scratch Org
 scratch-delete:
@@ -37,15 +39,20 @@ scratch-delete:
 scratch-list:
 	@sf org list
 
-# Synchronize a Developer Org
-dev-sync:
-	@if [ -z "$(ORG)" ]; then echo "❌ Usage: make dev-sync ORG=dev-feature-a"; exit 1; fi
-	@./scripts/shell/sync-dev-org.sh $(ORG)
-
 # Open an org
 dev-open:
 	@if [ -z "$(ORG)" ]; then echo "❌ Usage: make dev-open ORG=dev-feature-a"; exit 1; fi
 	@sf org open --target-org $(ORG)
+
+# Deploy to an org
+dev-deploy:
+	@if [ -z "$(ORG)" ]; then echo "❌ Usage: make dev-deploy ORG=dev-feature-a"; exit 1; fi
+	@sf project deploy start --source-dir force-app/main/default/lwc -o ${ORG}
+
+# Deploy the whole app to an org
+dev-deploy:
+	@if [ -z "$(ORG)" ]; then echo "❌ Usage: make dev-deploy-full ORG=dev-feature-a"; exit 1; fi
+	@sf project deploy start --source-dir force-app -o ${ORG}
 
 # Run tests
 test:

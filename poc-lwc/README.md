@@ -1,18 +1,18 @@
-# Salesforce DX Project: Next Steps
+# SALESFORCE POC
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+The goal is to have a way to develop locally a Lightning Web Component which will be later integrated in SalesForce.
 
-## How Do You Plan to Deploy Your Changes?
+## How to setup :
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+### If you are here for the first time :
+- Signup here https://www.salesforce.com/form/developer-signup/?d=pb (not working on firefox for the moment)
+- Install [salesforce cli](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm)
+- Login to your org via shell using web `sf org login web --alias DevHub --set-default-dev-hub`
+- Activate dev hub in your org : Log in to your org → setup → dev hub (enable)
 
-## Configure Your Salesforce DX Project
+### If you already have read the notion page :
+- Use the make command (this will create a scratch org and deploy the repo to it)
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+```json
+make scratch-create NAME=<feature_name> DAYS=<number of days you want this scratch to be active max 7>
+```

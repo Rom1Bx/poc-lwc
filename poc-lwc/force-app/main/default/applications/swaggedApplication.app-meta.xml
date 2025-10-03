@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Swagged Application with custom tabs</description>
+    <formFactors>Large</formFactors>
+    <isDefaultApplication>true</isDefaultApplication>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Swagged Application</label>
+    <navType>Standard</navType>
+    <tabs>customTab</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

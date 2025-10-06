@@ -1,3 +1,6 @@
+api/__pycache__/*
+api/.python-version
+
 # Salesforce CLI
 .sfdx/
 .sf/

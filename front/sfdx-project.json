@@ -5,7 +5,7 @@
       "default": true
     }
   ],
-  "name": "poc-lwc",
+  "name": "front",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "64.0"

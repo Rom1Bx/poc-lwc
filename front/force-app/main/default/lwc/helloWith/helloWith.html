@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="My Awesome Component">
+        <div class="slds-m-around_medium">
+            <p>Hello {name}!</p>
+            
+            <lightning-input 
+                label="Your name" 
+                onchange={handleChange}>
+            </lightning-input>
+            
+            <lightning-button 
+                variant="brand" 
+                label="Download" 
+                title="Download action" 
+                icon-name="utility:download"
+                icon-position="right" 
+                class="slds-m-left_x-small" 
+                onclick={handleApiCall}>
+            </lightning-button>
+            
+            <!-- Display message safely -->
+            <template if:true={data}>
+                <p class="slds-m-top_medium">✅ Message: {message}</p>
+            </template>
+            
+            <template if:true={error}>
+                <p class="slds-m-top_medium slds-text-color_error">❌ Error: {error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

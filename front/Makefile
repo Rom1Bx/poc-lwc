@@ -41,8 +41,11 @@ scratch-list:
 
 # Open an org
 dev-open:
-	@if [ -z "$(ORG)" ]; then echo "❌ Usage: make dev-open ORG=dev-feature-a"; exit 1; fi
-	@sf org open --target-org $(ORG)
+	@if [ -z "$(ORG)" ]; then \
+		sf org open --path lightning/n/customTab; \
+	else \
+		sf org open --target-org $(ORG) --path lightning/n/customTab; \
+	fi
 
 # Deploy to an org
 dev-deploy:
@@ -50,7 +53,7 @@ dev-deploy:
 	@sf project deploy start --source-dir force-app/main/default/lwc -o ${ORG}
 
 # Deploy the whole app to an org
-dev-deploy:
+dev-deploy-full:
 	@if [ -z "$(ORG)" ]; then echo "❌ Usage: make dev-deploy-full ORG=dev-feature-a"; exit 1; fi
 	@sf project deploy start --source-dir force-app -o ${ORG}
 

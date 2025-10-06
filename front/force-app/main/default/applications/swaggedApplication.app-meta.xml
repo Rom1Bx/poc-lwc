@@ -6,7 +6,6 @@
     </brand>
     <description>Swagged Application with custom tabs</description>
     <formFactors>Large</formFactors>
-    <isDefaultApplication>true</isDefaultApplication>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Swagged Application</label>

@@ -1,0 +1,1 @@
+Just a random api to poc that a lwc component can receive data

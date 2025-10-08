@@ -1,6 +1,8 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement, track, api } from 'lwc';
 
 export default class HelloWith extends LightningElement {
+    @api source; // This will comes as a prop from the page or the component calling this LWC
+
     @track name = 'World';
     @track data;
     @track error;
@@ -30,5 +32,9 @@ export default class HelloWith extends LightningElement {
     // Getter to safely access message
     get message() {
         return this.data ? this.data.message : 'No data yet';
+    }
+
+    get sourceValue() {
+        return this.source ? this.source : 'No source'
     }
 }

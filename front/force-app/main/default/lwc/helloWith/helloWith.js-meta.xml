@@ -3,8 +3,15 @@
     <apiVersion>64.0</apiVersion>
     <isExposed>true</isExposed>
     <targets>
-    <target>lightning__AppPage</target>
-    <target>lightning__HomePage</target>
-    <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
     </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage">
+            <property name="source" type="String" default="defaultValue" 
+                      label="Source" 
+                      description="Define the source of the component"/>
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>

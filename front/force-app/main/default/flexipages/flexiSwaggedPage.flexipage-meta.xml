@@ -7,6 +7,10 @@
             <componentInstance>
                 <componentName>c:helloWith</componentName>
                 <identifier>c_helloWith</identifier>
+                <componentInstanceProperties>
+                    <name>source</name>
+                    <value>Kinto</value>
+                </componentInstanceProperties>
             </componentInstance>
         </itemInstances>
     </flexiPageRegions>

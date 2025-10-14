@@ -8,8 +8,8 @@ Should answer this question : "Are we able to develop a LWC so it can be integra
 
 ### Goals :
 
-- Is the integration gonna be complex for these coding geniuses ?
-- Is the development on our side a nightmare or just a gentle finger in the darkest place of the human body ?
+- Is the integration gonna be complex on BACS side ?
+- Is the development on our side a nightmare ?
 - Can we have salesforces instances to tests our development ?
 - Can several developers work together on this project ?
 
